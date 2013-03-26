@@ -30,17 +30,17 @@ function add_ttnode(subtypes::Dict{String, TTNode}, sname::String, t::Type)
 end
 
 # Get a string name for the type
-typ_name(t::UnionKind) = string(t)
+typ_name(t::UnionType) = string(t)
 typ_name(t::TypeConstructor) = string(t)
 typ_name(t::Type) = string(t.name)
 
 # Store a type and its type hierarchy chain
-function store_type(sname::String, t::UnionKind)
-    local suptype::Type = UnionKind
+function store_type(sname::String, t::UnionType)
+    local suptype::Type = UnionType
     local subtypes::Dict{String, TTNode}
     local tnode::TTNode = TTNode(sname, t)
 
-    # store unions under UnionKind type
+    # store unions under UnionType type
     subtypes = store_type(typ_name(suptype), suptype)
     add_ttnode(subtypes, sname, tnode)
 
