@@ -84,14 +84,23 @@ function store_all_from(m::Module)
     end
 end
 
+type_props(typ::UnionType) = ""
+function type_props(typ::DataType)
+    ret = typ.abstract ? " abstract":" concrete"
+    ret = string(ret, typ.mutable ? " mutable":" immutable")
+    ret = string(ret, typ.pointerfree ? " pointerfree":"")
+    ret = string(ret, " size:", typ.size)
+    (length(ret) > 0) ? string("<<", ret, " >>") : ret
+end
+
 function print_tree(pfx::String, subtypes::Dict{String, TTNode})
     local state = start(subtypes)
     while !done(subtypes, state)
         (nv, state) = next(subtypes, state)
         if(nv[1] == string(nv[2].typ))
-            println(pfx, "+- ", nv[1])
+            println(pfx, "+- ", nv[1], " ", type_props(nv[2].typ))
         else
-            println(pfx, "+- ", nv[1], " = ",  nv[2].typ)
+            println(pfx, "+- ", nv[1], " = ",  nv[2].typ, " ", type_props(nv[2].typ))
         end
         print_tree(pfx * ".  ", nv[2].subtypes)
     end
