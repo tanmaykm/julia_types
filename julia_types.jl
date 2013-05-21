@@ -107,7 +107,9 @@ function print_tree(subtypes::Dict{String, TTNode}, pfx::String="")
 end
 
 
-# TODO: take module names in command line and default to the following when not given
+# TODO: optionally take module names in command line 
+# TODO: sort output
+# TODO: option to list subtrees of type tree, or other symbol types
 const types_tree = Dict{String, TTNode}()
 
 for m = [Base, Core, Main]
