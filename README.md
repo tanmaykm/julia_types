@@ -2,11 +2,15 @@ julia\_types
 ===========
 
 Generate a text graphic of Julia modules type tree.
-Adapted from typetree.jl.
+Optionally show a portion of the type tree for a specified type.
 
 Usage
 =====
-julia julia\_types.jl
+````
+julia julia_types.jl [type]
+````
+Omitting the `type` parameter displays the full tree.
+
 
 Example Output
 ==============

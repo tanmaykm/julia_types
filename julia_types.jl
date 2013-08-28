@@ -1,6 +1,5 @@
 ##
 # Generate a text graphic of Julia modules type tree
-# Adapted from typetree.jl
 ##
 
 # The node type holds the type of the cuurent node and a dict of subtypes
@@ -106,15 +105,39 @@ function print_tree(subtypes::Dict{String, TTNode}, pfx::String="")
     end
 end
 
+function has_type(subtypes::Dict{String, TTNode}, filter_type::String)
+    ret = false
+    del_nodes = String[]
+    for (n,v) in subtypes
+        if (n == filter_type) || has_type(v.subtypes, filter_type)
+            ret = true
+        else
+            push!(del_nodes, n)
+        end
+    end
+    for n in del_nodes
+        delete!(subtypes, n)
+    end
+    ret
+end
 
 # TODO: optionally take module names in command line 
 # TODO: sort output
-# TODO: option to list subtrees of type tree, or other symbol types
 const types_tree = Dict{String, TTNode}()
 
 for m = [Base, Core, Main]
     store_all_from(m)
 end
 
-print_tree(types_tree)
+if isempty(ARGS)
+    print_tree(types_tree)
+else
+    # list subtrees of the type tree that has the specified type
+    filter_type = ARGS[1]
+    if has_type(types_tree, filter_type)
+        print_tree(types_tree)
+    else
+        println("type $filter_type not found")
+    end
+end
 
