@@ -121,19 +121,29 @@ function has_type(subtypes::Dict{String, TTNode}, filter_type::String)
     ret
 end
 
-# TODO: optionally take module names in command line 
 # TODO: sort output
 const types_tree = Dict{String, TTNode}()
+const default_modules = [Base, Core, Main]
 
-for m = [Base, Core, Main]
+for m in default_modules
     store_all_from(m)
+end
+
+# take module names in command line if provided
+if length(ARGS) > 1
+    for argid in 1:(length(ARGS)-1)
+        arg = symbol(ARGS[argid])
+        #usingmodule(arg)
+        eval(current_module(), Expr(:toplevel, Expr(:using, arg)))
+        store_all_from(eval(arg))
+    end
 end
 
 if isempty(ARGS)
     print_tree(types_tree)
 else
     # list subtrees of the type tree that has the specified type
-    filter_type = ARGS[1]
+    filter_type = ARGS[end]
     if has_type(types_tree, filter_type)
         print_tree(types_tree)
     else

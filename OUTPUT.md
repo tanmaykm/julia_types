@@ -1,332 +1,383 @@
-Generated with, Version 0.2.0-1505.r6da4a71a, Commit 6da4a71aee 2013-05-14 04:53:45
+Generated with: Version 0.3.0-prerelease+2486, Commit 7211853* (2014-04-04 06:05 UTC)
 
 ````
-+- Dims = (Int64...,) 
++- StdIOSet = (Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}),Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}),Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None})) 
 +- Any << abstract immutable size:0 >>
-.  +- StaticVarInfo << concrete mutable size:24 >>
-.  +- NotFound << concrete mutable pointerfree size:0 >>
+.  +- FDEvent << concrete immutable pointerfree size:3 >>
+.  +- FixedSetPartitions = FixedSetPartitions{T<:AbstractArray{T,1}} << concrete immutable size:16 >>
+.  +- FileRedirect << concrete immutable size:16 >>
+.  .  +- Redirectable = Union(IOStream,AsyncStream,FileRedirect,File) 
+.  .  +- RawOrBoxedHandle = Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}) 
+.  +- WeakRef << concrete mutable size:8 >>
 .  +- Colon << concrete mutable pointerfree size:0 >>
-.  +- MmapArrayInfo << concrete mutable size:24 >>
-.  +- Exception << abstract immutable size:0 >>
-.  .  +- ArgumentError << concrete mutable size:8 >>
-.  .  +- TypeError << concrete mutable size:32 >>
-.  .  +- SystemError << concrete mutable size:16 >>
-.  .  +- EOFError << concrete mutable pointerfree size:0 >>
-.  .  +- KeyError << concrete mutable size:8 >>
-.  .  +- StackOverflowError << concrete mutable pointerfree size:0 >>
-.  .  +- LoadError << concrete mutable size:24 >>
-.  .  +- DisconnectException << concrete mutable pointerfree size:0 >>
-.  .  +- InterruptException << concrete mutable pointerfree size:0 >>
-.  .  +- MemoryError << concrete mutable pointerfree size:0 >>
-.  .  +- MethodError << concrete mutable size:16 >>
-.  .  +- UndefRefError << concrete mutable pointerfree size:0 >>
-.  .  +- ErrorException << concrete mutable size:8 >>
-.  .  +- OverflowError << concrete mutable pointerfree size:0 >>
-.  .  +- DomainError << concrete mutable pointerfree size:0 >>
-.  .  +- InexactError << concrete mutable pointerfree size:0 >>
-.  .  +- UVError << concrete mutable size:16 >>
-.  .  +- DivideError << concrete mutable pointerfree size:0 >>
-.  .  +- ParseError << concrete mutable size:8 >>
-.  .  +- BoundsError << concrete mutable pointerfree size:0 >>
-.  +- ProcessChain << concrete mutable size:32 >>
-.  .  +- ProcessChainOrNot = Union(ProcessChain,Bool) 
-.  +- LongSymbol << abstract immutable size:0 >>
-.  +- ValueIterator = ValueIterator{T<:Associative{K,V}} << concrete immutable size:8 >>
-.  +- KeyIterator = KeyIterator{T<:Associative{K,V}} << concrete immutable size:8 >>
-.  +- LocalProcess << concrete mutable pointerfree size:0 >>
-.  +- SymbolNode << concrete mutable size:16 >>
-.  .  +- ExprNode = Union(SymbolNode,TopNode,QuoteNode,LabelNode,LineNumberNode,GotoNode) 
-.  +- Factorization = Factorization{Ty<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << abstract immutable size:0 >>
-.  .  +- Hessenberg = Hessenberg{T} << concrete mutable size:16 >>
-.  .  +- LDLTTridiagonal = LDLTTridiagonal{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32),S<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:16 >>
-.  .  +- LU = LU{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:24 >>
-.  .  +- Cholesky = Cholesky{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:16 >>
-.  .  +- GeneralizedSVD = GeneralizedSVD{T} << concrete mutable size:64 >>
-.  .  +- LUTridiagonal = LUTridiagonal{T} << concrete mutable size:40 >>
-.  .  +- BunchKaufman = BunchKaufman{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:24 >>
-.  .  +- Schur = Schur{Ty<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:24 >>
-.  .  +- SVD = SVD{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32),Tr} << concrete mutable size:24 >>
-.  .  +- CholeskyPivoted = CholeskyPivoted{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:48 >>
-.  .  +- Eigen = Eigen{T,V} << concrete mutable size:16 >>
-.  .  +- GeneralizedSchur = GeneralizedSchur{Ty<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:48 >>
-.  .  +- QRPivoted = QRPivoted{T} << concrete mutable size:24 >>
-.  .  +- QR = QR{S<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:16 >>
-.  +- Associative = Associative{K,V} << abstract immutable size:0 >>
-.  .  +- WeakKeyDict = WeakKeyDict{K,V} << concrete mutable size:8 >>
-.  .  +- EnvHash << concrete mutable pointerfree size:0 >>
-.  .  +- ObjectIdDict << concrete mutable size:8 >>
-.  .  +- Dict = Dict{K,V} << concrete mutable size:48 >>
-.  .  +- VarTable = ObjectIdDict << concrete mutable size:8 >>
-.  +- Rest = Rest{I,S} << concrete immutable size:16 >>
-.  +- Module << concrete mutable size:16 >>
-.  +- Nothing << concrete immutable pointerfree size:0 >>
-.  +- TTNode << concrete mutable size:24 >>
-.  +- RemoteRef << concrete mutable pointerfree size:24 >>
-.  +- Reverse << concrete mutable size:8 >>
-.  +- Worker << concrete mutable size:64 >>
-.  +- EachLine << concrete mutable size:16 >>
-.  +- RegexMatchIterator << concrete immutable size:24 >>
-.  +- Enumerate = Enumerate{I} << concrete mutable size:8 >>
-.  +- TypeName << concrete mutable size:32 >>
-.  +- CallStack << concrete mutable size:56 >>
-.  +- Symbol << concrete mutable size:0 >>
-.  +- Method << concrete mutable size:48 >>
+.  +- GetfieldNode << concrete mutable size:24 >>
 .  +- AbstractArray = AbstractArray{Tv,2} << abstract immutable size:0 >>
-.  .  +- Triangular = Triangular{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:16 >>
-.  .  +- Chars = Union(AbstractArray{Char,1},Char,Set{Char}) 
-.  .  +- Diagonal = Diagonal{T} << concrete mutable size:8 >>
-.  .  +- SubArray = SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)} << concrete mutable size:0 >>
-.  .  .  +- Union(Array{T,2},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedMatrix = Union(Array{T,2},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},DArray{T,N,A}) 
-.  .  .  .  +- SubOrDArray = Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},DArray{T,N,A}) 
-.  .  .  +- Union(Array{T,1},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedVector = Union(Array{T,1},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- SubDArray = SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)} 
-.  .  .  +- Union(Array{T,2},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},Array{T,1}) 
-.  .  .  .  +- StridedVecOrMat = Union(Array{T,2},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},Array{T,1}) 
-.  .  .  +- Union(Array{T,N},SubArray{T,N,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedArray = Union(Array{T,N},SubArray{T,N,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  +- Hermitian = Hermitian{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:16 >>
+.  .  +- Symmetric = Symmetric{T} << concrete immutable size:16 >>
+.  .  +- Hermitian = Hermitian{T} << concrete immutable size:16 >>
+.  .  +- Range = Range{T} << abstract immutable size:0 >>
+.  .  .  +- OrdinalRange = OrdinalRange{T,S} << abstract immutable size:0 >>
+.  .  .  .  +- UnitRange = UnitRange{T<:Real} << concrete immutable size:16 >>
+.  .  .  .  +- StepRange = StepRange{T,S} << concrete immutable size:24 >>
+.  .  .  .  +- Range1 = UnitRange{T<:Real} << concrete immutable size:16 >>
+.  .  .  +- RangeIndex = Union(Int64,Range{Int64}) 
+.  .  .  +- FloatRange = FloatRange{T<:FloatingPoint} << concrete immutable size:32 >>
 .  .  +- Woodbury = Woodbury{T} << concrete mutable size:72 >>
-.  .  +- Ranges = Ranges{T<:Real} << abstract immutable size:0 >>
-.  .  .  +- Range1 = Range1{T<:Real} << concrete immutable size:16 >>
-.  .  .  .  +- RangeIndex = Union(Range1{Int64},Int64,Range{Int64}) 
-.  .  .  +- Range = Range{T<:Real} << concrete immutable size:24 >>
-.  .  .  .  +- RangeIndex = Union(Range1{Int64},Int64,Range{Int64}) 
-.  .  +- BitArray = BitArray{N} << concrete mutable size:16 >>
-.  .  +- SymTridiagonal = SymTridiagonal{T<:Union(Float64,Complex{Float64},Complex{Float32},Float32)} << concrete mutable size:16 >>
-.  .  +- BitVector = BitArray{1} << concrete mutable size:16 >>
-.  .  +- AbstractMatrix = AbstractArray{T,2} 
-.  .  +- Union(AbstractArray{T,1},AbstractArray{T,2}) 
-.  .  .  +- AbstractVecOrMat = Union(AbstractArray{T,1},AbstractArray{T,2}) 
-.  .  +- Array = Array{Union(ASCIIString,UTF8String),1} << concrete mutable size:0 >>
-.  .  .  +- Union(Array{T,2},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedMatrix = Union(Array{T,2},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- Executable = Union(Function,Array{Union(ASCIIString,UTF8String),1}) 
-.  .  .  +- Vector = Array{T,1} 
-.  .  .  +- Union(Array{T,1},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedVector = Union(Array{T,1},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- Union(Array{T,2},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},Array{T,1}) 
-.  .  .  .  +- StridedVecOrMat = Union(Array{T,2},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},Array{T,1}) 
-.  .  .  +- Union(Array{T,N},SubArray{T,N,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedArray = Union(Array{T,N},SubArray{T,N,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- Matrix = Array{T,2} 
-.  .  .  +- Union(Array{T,2},Array{T,1}) 
-.  .  .  .  +- VecOrMat = Union(Array{T,2},Array{T,1}) 
-.  .  .  +- RangeVecIntList = Union(Array{Range1{Int64},1},(Union(Ranges{T},Array{Int64,1})...,),Array{Array{Int64,1},1},Array{Range{Int64},1}) 
 .  .  +- Bidiagonal = Bidiagonal{T} << concrete mutable size:24 >>
-.  .  +- BitMatrix = BitArray{2} << concrete mutable size:16 >>
+.  .  +- DArray = DArray{T,N,A} << concrete mutable size:40 >>
+.  .  .  +- Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)},DArray{T,N,A}) 
+.  .  .  .  +- SubOrDArray = Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)},DArray{T,N,A}) 
 .  .  +- Tridiagonal = Tridiagonal{T} << concrete mutable size:40 >>
-.  .  +- DArray = DArray{T,N,A} << concrete mutable size:0 >>
-.  .  .  +- Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},DArray{T,N,A}) 
-.  .  .  .  +- SubOrDArray = Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},DArray{T,N,A}) 
-.  .  +- AbstractSparseMatrix = AbstractSparseMatrix{Tv,Ti<:Integer} << abstract immutable size:0 >>
+.  .  +- Union(AbstractArray{T,2},AbstractArray{T,1}) 
+.  .  .  +- AbstractVecOrMat = Union(AbstractArray{T,2},AbstractArray{T,1}) 
+.  .  +- SymTridiagonal = SymTridiagonal{T} << concrete mutable size:16 >>
+.  .  +- DenseArray = DenseArray{Bool,2} << abstract immutable size:0 >>
+.  .  .  +- Array = Array{T,2} << concrete mutable size:0 >>
+.  .  .  .  +- Matrix = Array{T,2} 
+.  .  .  .  +- Union(Array{T,2},Array{T,1}) 
+.  .  .  .  .  +- VecOrMat = Union(Array{T,2},Array{T,1}) 
+.  .  .  .  +- Vector = Array{T,1} 
+.  .  .  .  +- ByteArray = Union(Array{Int8,1},Array{Uint8,1}) 
+.  .  .  +- DenseVector = DenseArray{T,1} 
+.  .  .  +- Union(DenseArray{T,1},DenseArray{T,2}) 
+.  .  .  .  +- DenseVecOrMat = Union(DenseArray{T,1},DenseArray{T,2}) 
+.  .  .  +- Union(DenseArray{T,N},SubArray{T,N,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  .  +- StridedArray = Union(DenseArray{T,N},SubArray{T,N,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  +- BitMatrix = BitArray{2} << concrete mutable size:24 >>
+.  .  .  +- Union(SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  .  +- StridedMatrix = Union(SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  +- BitArray = BitArray{N} << concrete mutable size:24 >>
+.  .  .  +- BitVector = BitArray{1} << concrete mutable size:24 >>
+.  .  .  +- SharedArray = SharedArray{T,N} << concrete mutable size:56 >>
+.  .  .  +- Union(DenseArray{T,1},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  .  +- StridedVector = Union(DenseArray{T,1},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  +- Union(DenseArray{T,1},SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  .  +- StridedVecOrMat = Union(DenseArray{T,1},SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  +- DenseMatrix = DenseArray{T,2} 
+.  .  +- Chars = Union(Char,Set{Char},AbstractArray{Char,1}) 
+.  .  +- Union(AbstractArray{Range{Int64},1},(Union(Range{T},AbstractArray{Int64,1})...,),AbstractArray{UnitRange{Int64},1},AbstractArray{A<:AbstractArray{Int64,1},1}) 
+.  .  +- SubArray = SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)} << concrete mutable size:0 >>
+.  .  .  +- Union(DenseArray{T,1},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  .  +- StridedVector = Union(DenseArray{T,1},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  +- Union(DenseArray{T,1},SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  .  +- StridedVecOrMat = Union(DenseArray{T,1},SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  +- Union(DenseArray{T,N},SubArray{T,N,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  .  +- StridedArray = Union(DenseArray{T,N},SubArray{T,N,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  +- SubDArray = SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)} 
+.  .  .  +- Union(SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  .  +- StridedMatrix = Union(SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  +- Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)},DArray{T,N,A}) 
+.  .  .  .  +- SubOrDArray = Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)},DArray{T,N,A}) 
+.  .  +- AbstractSparseArray = AbstractSparseArray{Tv,Ti<:Integer,2} << abstract immutable size:0 >>
 .  .  .  +- SparseMatrixCSC = SparseMatrixCSC{Tv,Ti<:Integer} << concrete mutable size:40 >>
+.  .  .  +- AbstractSparseVector = AbstractSparseArray{Tv,Ti,1} 
+.  .  .  +- AbstractSparseMatrix = AbstractSparseArray{Tv,Ti,2} 
+.  .  +- AbstractMatrix = AbstractArray{T,2} 
+.  .  +- Triangular = Triangular{T<:Number} << concrete immutable size:16 >>
+.  .  +- Diagonal = Diagonal{T} << concrete mutable size:8 >>
 .  .  +- AbstractVector = AbstractArray{T,1} 
-.  +- UVHandle = Ptr{None} << concrete immutable pointerfree size:8 >>
-.  +- CPUinfo << concrete mutable size:64 >>
-.  +- IpAddr << abstract immutable size:0 >>
-.  .  +- IPv4 << concrete mutable pointerfree size:4 >>
-.  .  +- IPv6 << concrete mutable pointerfree size:16 >>
-.  +- Ptr = Ptr{None} << concrete immutable pointerfree size:8 >>
-.  .  +- RawOrBoxedHandle = Union(Ptr{None},File,AsyncStream) 
-.  +- Vararg = T... << abstract immutable size:0 >>
-.  +- Undef << abstract immutable size:0 >>
-.  .  +- Top 
-.  +- QuoteNode << concrete immutable size:8 >>
-.  .  +- ExprNode = Union(SymbolNode,TopNode,QuoteNode,LabelNode,LineNumberNode,GotoNode) 
-.  +- LambdaStaticData << concrete mutable size:104 >>
-.  +- NTuple = NTuple{N,T} << abstract immutable size:0 >>
-.  +- IO << abstract immutable size:0 >>
-.  .  +- IOStream << concrete mutable size:24 >>
-.  .  +- IOString = IOBuffer << concrete mutable size:40 >>
-.  .  +- UVStream = AsyncStream << abstract immutable size:0 >>
-.  .  +- IOBuffer << concrete mutable size:40 >>
-.  .  +- AsyncStream << abstract immutable size:0 >>
-.  .  .  +- Redirectable = Union(File,AsyncStream) 
-.  .  .  +- SpawnNullStream << concrete mutable pointerfree size:0 >>
-.  .  .  +- NamedPipe << concrete mutable size:56 >>
-.  .  .  +- RawOrBoxedHandle = Union(Ptr{None},File,AsyncStream) 
-.  .  .  +- TTY << concrete mutable size:56 >>
-.  .  .  +- Socket << abstract immutable size:0 >>
-.  .  .  .  +- TcpSocket << concrete mutable size:72 >>
-.  .  .  .  +- UdpSocket << concrete mutable size:72 >>
-.  .  +- AbstractFile << abstract immutable size:0 >>
-.  .  .  +- File << concrete mutable size:16 >>
-.  .  .  .  +- Redirectable = Union(File,AsyncStream) 
-.  .  .  .  +- RawOrBoxedHandle = Union(Ptr{None},File,AsyncStream) 
-.  +- EmptyCallStack << concrete mutable pointerfree size:0 >>
-.  +- InetAddr << concrete mutable size:16 >>
-.  +- TopNode << concrete immutable size:8 >>
-.  .  +- ExprNode = Union(SymbolNode,TopNode,QuoteNode,LabelNode,LineNumberNode,GotoNode) 
+.  .  +- Ranges = Range{T} << abstract immutable size:0 >>
+.  +- CFILE << concrete immutable pointerfree size:8 >>
 .  +- String << abstract immutable size:0 >>
-.  .  +- RepString << concrete immutable size:16 >>
-.  .  +- RevString << concrete immutable size:8 >>
 .  .  +- UTF8String << concrete immutable size:8 >>
 .  .  .  +- ByteString = Union(ASCIIString,UTF8String) 
 .  .  +- DirectIndexString << abstract immutable size:0 >>
+.  .  .  +- CharString = UTF32String << concrete immutable size:8 >>
 .  .  .  +- ASCIIString << concrete immutable size:8 >>
 .  .  .  .  +- ByteString = Union(ASCIIString,UTF8String) 
-.  .  .  +- CharString << concrete immutable size:8 >>
-.  .  +- RopeString << concrete immutable size:32 >>
+.  .  .  +- UTF32String << concrete immutable size:8 >>
 .  .  +- GenericString << concrete immutable size:8 >>
+.  .  +- RevString = RevString{T<:String} << concrete immutable size:8 >>
+.  .  +- RepString << concrete immutable size:16 >>
+.  .  +- UTF16String << concrete immutable size:8 >>
+.  .  +- RopeString << concrete immutable size:32 >>
 .  .  +- SubString = SubString{T<:String} << concrete immutable size:24 >>
-.  +- UndefRefTag << abstract immutable size:0 >>
-.  +- Zip << concrete mutable size:16 >>
-.  +- Regex << concrete immutable size:24 >>
-.  +- LongExpr << abstract immutable size:0 >>
-.  +- IntrinsicFunction << concrete immutable pointerfree size:4 >>
-.  +- Set = Set{Char} << concrete mutable size:8 >>
-.  .  +- Chars = Union(AbstractArray{Char,1},Char,Set{Char}) 
-.  +- UV_cpu_info_t << concrete mutable pointerfree size:56 >>
-.  +- AbstractRNG << abstract immutable size:0 >>
-.  .  +- MersenneTwister << concrete mutable size:24 >>
-.  +- GetfieldNode << concrete mutable size:24 >>
-.  +- LabelNode << concrete immutable pointerfree size:8 >>
-.  .  +- ExprNode = Union(SymbolNode,TopNode,QuoteNode,LabelNode,LineNumberNode,GotoNode) 
-.  +- Stat << concrete immutable pointerfree size:96 >>
-.  +- Box << concrete mutable size:8 >>
-.  +- Top 
-.  +- UVPollingWatcher << abstract immutable size:0 >>
-.  .  +- PollingFileWatcher << concrete mutable size:24 >>
-.  .  +- FDWatcher << concrete mutable size:24 >>
-.  +- WeakRef << concrete mutable size:8 >>
-.  +- AsyncWork << abstract immutable size:0 >>
-.  .  +- IdleAsyncWork << concrete mutable size:16 >>
-.  .  +- SingleAsyncWork << concrete mutable size:16 >>
-.  .  +- TimeoutAsyncWork << concrete mutable size:16 >>
-.  +- WorkItem << concrete mutable size:56 >>
-.  +- TypeVar << concrete immutable size:24 >>
-.  +- Task << concrete mutable size:48 >>
-.  +- IntSet << concrete mutable size:24 >>
-.  +- StateUpdate << concrete mutable size:24 >>
-.  +- TmStruct << concrete mutable pointerfree size:56 >>
-.  +- GotoNode << concrete immutable pointerfree size:8 >>
-.  .  +- ExprNode = Union(SymbolNode,TopNode,QuoteNode,LabelNode,LineNumberNode,GotoNode) 
-.  +- AbstractCmd << abstract immutable size:0 >>
-.  .  +- Cmd << concrete mutable size:16 >>
-.  .  +- AndCmds << concrete mutable size:16 >>
-.  .  +- OrCmds << concrete mutable size:16 >>
-.  .  +- CmdRedirect << concrete mutable size:24 >>
-.  +- WaitTask << concrete mutable size:24 >>
-.  +- Process << concrete mutable size:80 >>
+.  +- Factorization = Factorization{T} << abstract immutable size:0 >>
 .  +- Function << concrete mutable size:24 >>
-.  .  +- Executable = Union(Function,Array{Union(ASCIIString,UTF8String),1}) 
-.  .  +- Callback = Union(Bool,Function) 
-.  +- Expr << concrete mutable size:24 >>
-.  +- OS_FD << concrete immutable pointerfree size:4 >>
-.  +- UV_error_t << concrete mutable pointerfree size:8 >>
-.  +- ProcessGroup << concrete mutable size:40 >>
-.  +- FileMonitor << concrete mutable size:16 >>
+.  .  +- Callable = Union(DataType,Function) 
+.  .  +- Callback = Union(Function,Bool) 
+.  +- TmStruct << concrete mutable pointerfree size:56 >>
+.  +- FileEvent << concrete immutable pointerfree size:3 >>
+.  +- FixedPartitions << concrete immutable pointerfree size:16 >>
+.  +- Condition << concrete mutable size:8 >>
+.  +- FileMonitor << concrete mutable size:32 >>
+.  +- InetAddr << concrete mutable size:16 >>
+.  +- Exception << abstract immutable size:0 >>
+.  .  +- StackOverflowError << concrete mutable pointerfree size:0 >>
+.  .  +- DomainError << concrete mutable pointerfree size:0 >>
+.  .  +- DimensionMismatch << concrete mutable size:8 >>
+.  .  +- LoadError << concrete mutable size:24 >>
+.  .  +- ProcessExitedException << concrete mutable pointerfree size:0 >>
+.  .  +- UVError << concrete mutable size:16 >>
+.  .  +- MemoryError << concrete mutable pointerfree size:0 >>
+.  .  +- UndefVarError << concrete mutable size:8 >>
+.  .  +- InexactError << concrete mutable pointerfree size:0 >>
+.  .  +- ParseError << concrete mutable size:8 >>
+.  .  +- UndefRefError << concrete mutable pointerfree size:0 >>
+.  .  +- BoundsError << concrete mutable pointerfree size:0 >>
+.  .  +- ArgumentError << concrete mutable size:8 >>
+.  .  +- MethodError << concrete mutable size:16 >>
+.  .  +- EOFError << concrete mutable pointerfree size:0 >>
+.  .  +- KeyError << concrete mutable size:8 >>
+.  .  +- ErrorException << concrete mutable size:8 >>
+.  .  +- TypeError << concrete mutable size:32 >>
+.  .  +- InterruptException << concrete mutable pointerfree size:0 >>
+.  .  +- OverflowError << concrete mutable pointerfree size:0 >>
+.  .  +- DivideError << concrete mutable pointerfree size:0 >>
+.  .  +- SystemError << concrete mutable size:16 >>
+.  +- RemoteRef << concrete mutable pointerfree size:24 >>
+.  +- NTuple = NTuple{N,T} << abstract immutable size:0 >>
+.  +- Process << concrete mutable size:80 >>
+.  +- Task << concrete mutable size:72 >>
+.  +- RawFD << concrete immutable pointerfree size:4 >>
+.  +- UVServer << abstract immutable size:0 >>
+.  .  +- TcpServer << concrete mutable size:48 >>
+.  .  +- PipeServer << concrete mutable size:48 >>
+.  +- StateUpdate << concrete mutable size:24 >>
+.  +- Top 
+.  +- Vararg = T... << abstract immutable size:0 >>
+.  +- Display << abstract immutable size:0 >>
+.  .  +- TextDisplay << concrete immutable size:8 >>
+.  +- Undef << abstract immutable size:0 >>
+.  .  +- Top 
+.  +- LineNumberNode << concrete immutable pointerfree size:8 >>
+.  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
+.  +- NewvarNode << concrete immutable size:8 >>
+.  +- Module << concrete mutable size:16 >>
+.  +- ProcessChain << concrete mutable size:32 >>
+.  .  +- ProcessChainOrNot = Union(ProcessChain,Bool) 
+.  +- IpAddr << abstract immutable size:0 >>
+.  .  +- IPv4 << concrete immutable pointerfree size:4 >>
+.  .  +- IPv6 << concrete immutable pointerfree size:16 >>
+.  +- IntSet << concrete mutable size:24 >>
+.  +- NotFound << concrete mutable pointerfree size:0 >>
+.  +- AbstractRNG << abstract immutable size:0 >>
+.  .  +- MersenneTwister << concrete mutable size:16 >>
+.  +- Worker << concrete mutable size:96 >>
+.  +- Box << concrete mutable size:8 >>
+.  +- MIME = MIME{mime} << concrete immutable pointerfree size:0 >>
+.  +- IO << abstract immutable size:0 >>
+.  .  +- Base64Pipe << concrete mutable size:16 >>
+.  .  +- AbstractFile << abstract immutable size:0 >>
+.  .  .  +- File << concrete mutable size:16 >>
+.  .  .  .  +- Redirectable = Union(IOStream,AsyncStream,FileRedirect,File) 
+.  .  .  .  +- RawOrBoxedHandle = Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}) 
+.  .  +- AsyncStream << abstract immutable size:0 >>
+.  .  .  +- Socket << abstract immutable size:0 >>
+.  .  .  .  +- TcpSocket << concrete mutable size:80 >>
+.  .  .  .  +- UdpSocket << concrete mutable size:40 >>
+.  .  .  +- DevNullStream << concrete immutable pointerfree size:0 >>
+.  .  .  +- Redirectable = Union(IOStream,AsyncStream,FileRedirect,File) 
+.  .  .  +- Pipe << concrete mutable size:80 >>
+.  .  .  +- TTY << concrete mutable size:64 >>
+.  .  .  +- RawOrBoxedHandle = Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}) 
+.  .  +- IOBuffer << concrete mutable size:40 >>
+.  .  +- UVStream = AsyncStream << abstract immutable size:0 >>
+.  .  +- IOStream << concrete mutable size:24 >>
+.  .  .  +- Redirectable = Union(IOStream,AsyncStream,FileRedirect,File) 
+.  .  .  +- RawOrBoxedHandle = Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}) 
+.  +- KeyIterator = KeyIterator{T<:Associative{K,V}} << concrete immutable size:8 >>
+.  +- MethodTable << concrete mutable size:56 >>
+.  +- Permutations = Permutations{T} << concrete immutable size:8 >>
 .  +- RegexMatch << concrete immutable size:32 >>
-.  +- Filter = Filter{I} << concrete mutable size:16 >>
-.  +- WaitFor << concrete mutable size:16 >>
+.  +- UVHandle = Ptr{None} << concrete immutable pointerfree size:8 >>
+.  +- EachLine << concrete mutable size:16 >>
+.  +- Stat = StatStruct << concrete immutable pointerfree size:96 >>
+.  +- FDW_FD = RawFD << concrete immutable pointerfree size:4 >>
+.  +- TopNode << concrete immutable size:8 >>
+.  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
+.  +- Enumerate = Enumerate{I} << concrete immutable size:8 >>
+.  +- Zip2 = Zip2{I1,I2} << concrete immutable size:16 >>
+.  +- AsyncWork << abstract immutable size:0 >>
+.  .  +- Timer << concrete mutable size:16 >>
+.  .  +- SingleAsyncWork << concrete mutable size:16 >>
+.  .  +- TimeoutAsyncWork = Timer << concrete mutable size:16 >>
+.  +- GotoNode << concrete immutable pointerfree size:8 >>
+.  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
+.  +- EmptyCallStack << concrete mutable pointerfree size:0 >>
 .  +- Type_Array = Type{Array{T,N}} << abstract immutable size:0 >>
+.  +- Zip = Zip{I<:(Any...,)} << concrete immutable size:8 >>
 .  +- VersionNumber << concrete immutable size:40 >>
-.  +- LongTuple << abstract immutable size:0 >>
+.  +- Regex << concrete mutable size:32 >>
+.  +- Nothing << concrete immutable pointerfree size:0 >>
+.  +- Combinations = Combinations{T} << concrete immutable size:16 >>
+.  +- AbstractCmd << abstract immutable size:0 >>
+.  .  +- CmdRedirect << concrete mutable size:24 >>
+.  .  +- Cmd << concrete mutable size:32 >>
+.  .  +- ErrOrCmds << concrete mutable size:16 >>
+.  .  +- OrCmds << concrete mutable size:16 >>
+.  .  +- AndCmds << concrete mutable size:16 >>
+.  +- ValueIterator = ValueIterator{T<:Associative{K,V}} << concrete immutable size:8 >>
+.  +- TTNode << concrete mutable size:24 >>
 .  +- Number << abstract immutable size:0 >>
-.  .  +- Complex = Complex{Float64} << concrete immutable pointerfree size:16 >>
-.  .  .  +- basenumtype = Union(Float64,Int32,Complex{Float64},Complex{Float32},Rational{T<:Integer},Int64,Float32) 
 .  .  +- Complex64 = Complex{Float32} << concrete immutable pointerfree size:8 >>
-.  .  +- Complex128 = Complex{Float64} << concrete immutable pointerfree size:16 >>
 .  .  +- ComplexPair = Complex{T<:Real} << concrete immutable size:16 >>
+.  .  +- Complex32 = Complex{Float16} << concrete immutable pointerfree size:4 >>
+.  .  +- Complex = Complex{Float32} << concrete immutable pointerfree size:8 >>
+.  .  .  +- basenumtype = Union(Int32,Int64,Complex{Float32},Rational{T<:Integer},Complex{Float64},Float32,Float64) 
 .  .  +- Real << abstract immutable size:0 >>
-.  .  .  +- Rational = Rational{T<:Integer} << concrete immutable size:16 >>
-.  .  .  .  +- basenumtype = Union(Float64,Int32,Complex{Float64},Complex{Float32},Rational{T<:Integer},Int64,Float32) 
 .  .  .  +- FloatingPoint << abstract immutable size:0 >>
 .  .  .  .  +- Cdouble = Float64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  +- Cfloat = Float32 << concrete immutable pointerfree size:4 >>
+.  .  .  .  +- Float16 << concrete immutable pointerfree size:2 >>
 .  .  .  .  +- Float32 << concrete immutable pointerfree size:4 >>
-.  .  .  .  .  +- basenumtype = Union(Float64,Int32,Complex{Float64},Complex{Float32},Rational{T<:Integer},Int64,Float32) 
-.  .  .  .  +- Float64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- basenumtype = Union(Float64,Int32,Complex{Float64},Complex{Float32},Rational{T<:Integer},Int64,Float32) 
+.  .  .  .  .  +- basenumtype = Union(Int32,Int64,Complex{Float32},Rational{T<:Integer},Complex{Float64},Float32,Float64) 
+.  .  .  .  +- Cfloat = Float32 << concrete immutable pointerfree size:4 >>
 .  .  .  .  +- BigFloat << concrete mutable pointerfree size:32 >>
+.  .  .  .  +- Float64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- basenumtype = Union(Int32,Int64,Complex{Float32},Rational{T<:Integer},Complex{Float64},Float32,Float64) 
+.  .  .  +- MathConst = MathConst{sym} << concrete immutable pointerfree size:0 >>
+.  .  .  +- Rational = Rational{T<:Integer} << concrete immutable size:16 >>
+.  .  .  .  +- basenumtype = Union(Int32,Int64,Complex{Float32},Rational{T<:Integer},Complex{Float64},Float32,Float64) 
 .  .  .  +- Integer << abstract immutable size:0 >>
-.  .  .  .  +- BigInt << concrete mutable pointerfree size:16 >>
+.  .  .  .  +- Char << concrete immutable pointerfree size:4 >>
+.  .  .  .  .  +- Chars = Union(Char,Set{Char},AbstractArray{Char,1}) 
 .  .  .  .  +- Signed << abstract immutable size:0 >>
+.  .  .  .  .  +- Int = Int64 << concrete immutable pointerfree size:8 >>
 .  .  .  .  .  +- FileOffset = Int64 << concrete immutable pointerfree size:8 >>
 .  .  .  .  .  +- Int32 << concrete immutable pointerfree size:4 >>
-.  .  .  .  .  .  +- basenumtype = Union(Float64,Int32,Complex{Float64},Complex{Float32},Rational{T<:Integer},Int64,Float32) 
-.  .  .  .  .  +- Cwchar_t = Int32 << concrete immutable pointerfree size:4 >>
-.  .  .  .  .  +- Clonglong = Int64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- Cssize_t = Int64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- Int = Int64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- Int16 << concrete immutable pointerfree size:2 >>
-.  .  .  .  .  +- Clong = Int64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- Int64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  .  +- RangeIndex = Union(Range1{Int64},Int64,Range{Int64}) 
-.  .  .  .  .  .  +- basenumtype = Union(Float64,Int32,Complex{Float64},Complex{Float32},Rational{T<:Integer},Int64,Float32) 
-.  .  .  .  .  +- Cchar = Int8 << concrete immutable pointerfree size:1 >>
-.  .  .  .  .  +- Cint = Int32 << concrete immutable pointerfree size:4 >>
-.  .  .  .  .  +- Cshort = Int16 << concrete immutable pointerfree size:2 >>
-.  .  .  .  .  +- Int128 << concrete immutable pointerfree size:16 >>
+.  .  .  .  .  .  +- SmallSigned = Union(Int32,Int8,Int16) 
+.  .  .  .  .  .  +- Signed64 = Union(Int32,Int64,Int8,Int16) 
+.  .  .  .  .  .  +- basenumtype = Union(Int32,Int64,Complex{Float32},Rational{T<:Integer},Complex{Float64},Float32,Float64) 
 .  .  .  .  .  +- Cptrdiff_t = Int64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- Clonglong = Int64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- Cchar = Int8 << concrete immutable pointerfree size:1 >>
+.  .  .  .  .  +- Cssize_t = Int64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- Coff_t = Int64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- Cshort = Int16 << concrete immutable pointerfree size:2 >>
+.  .  .  .  .  +- Int16 << concrete immutable pointerfree size:2 >>
+.  .  .  .  .  .  +- SmallSigned = Union(Int32,Int8,Int16) 
+.  .  .  .  .  .  +- Signed64 = Union(Int32,Int64,Int8,Int16) 
 .  .  .  .  .  +- Int8 << concrete immutable pointerfree size:1 >>
+.  .  .  .  .  .  +- SmallSigned = Union(Int32,Int8,Int16) 
+.  .  .  .  .  .  +- Signed64 = Union(Int32,Int64,Int8,Int16) 
+.  .  .  .  .  +- Cint = Int32 << concrete immutable pointerfree size:4 >>
+.  .  .  .  .  +- Int64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  .  +- Signed64 = Union(Int32,Int64,Int8,Int16) 
+.  .  .  .  .  .  +- RangeIndex = Union(Int64,Range{Int64}) 
+.  .  .  .  .  .  +- basenumtype = Union(Int32,Int64,Complex{Float32},Rational{T<:Integer},Complex{Float64},Float32,Float64) 
+.  .  .  .  .  +- Int128 << concrete immutable pointerfree size:16 >>
+.  .  .  .  .  +- Cwchar_t = Int32 << concrete immutable pointerfree size:4 >>
+.  .  .  .  .  +- Clong = Int64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  +- BigInt << concrete mutable pointerfree size:16 >>
 .  .  .  .  +- Bool << concrete immutable pointerfree size:1 >>
-.  .  .  .  .  +- Callback = Union(Bool,Function) 
 .  .  .  .  .  +- ProcessChainOrNot = Union(ProcessChain,Bool) 
+.  .  .  .  .  +- Callback = Union(Function,Bool) 
 .  .  .  .  +- Unsigned << abstract immutable size:0 >>
-.  .  .  .  .  +- Culonglong = Uint64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- Uint8 << concrete immutable pointerfree size:1 >>
-.  .  .  .  .  +- Uint128 << concrete immutable pointerfree size:16 >>
-.  .  .  .  .  +- Cushort = Uint16 << concrete immutable pointerfree size:2 >>
-.  .  .  .  .  +- Cuint = Uint32 << concrete immutable pointerfree size:4 >>
-.  .  .  .  .  +- Uint64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- Uint16 << concrete immutable pointerfree size:2 >>
 .  .  .  .  .  +- Uint32 << concrete immutable pointerfree size:4 >>
-.  .  .  .  .  +- Csize_t = Uint64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  .  +- Cuchar = Uint8 << concrete immutable pointerfree size:1 >>
-.  .  .  .  .  +- Uint = Uint64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  .  +- SmallUnsigned = Union(Uint8,Uint32,Uint16) 
+.  .  .  .  .  .  +- Unsigned64 = Union(Uint8,Uint32,Uint64,Uint16) 
 .  .  .  .  .  +- Culong = Uint64 << concrete immutable pointerfree size:8 >>
-.  .  .  .  +- Char << concrete immutable pointerfree size:4 >>
-.  .  .  .  .  +- Chars = Union(AbstractArray{Char,1},Char,Set{Char}) 
-.  .  +- ImaginaryUnit << concrete mutable pointerfree size:0 >>
+.  .  .  .  .  +- Cushort = Uint16 << concrete immutable pointerfree size:2 >>
+.  .  .  .  .  +- Uint8 << concrete immutable pointerfree size:1 >>
+.  .  .  .  .  .  +- SmallUnsigned = Union(Uint8,Uint32,Uint16) 
+.  .  .  .  .  .  +- Unsigned64 = Union(Uint8,Uint32,Uint64,Uint16) 
+.  .  .  .  .  +- Uint64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  .  +- Unsigned64 = Union(Uint8,Uint32,Uint64,Uint16) 
+.  .  .  .  .  +- Culonglong = Uint64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- Uint16 << concrete immutable pointerfree size:2 >>
+.  .  .  .  .  .  +- SmallUnsigned = Union(Uint8,Uint32,Uint16) 
+.  .  .  .  .  .  +- Unsigned64 = Union(Uint8,Uint32,Uint64,Uint16) 
+.  .  .  .  .  +- Uint128 << concrete immutable pointerfree size:16 >>
+.  .  .  .  .  +- Uint = Uint64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- Csize_t = Uint64 << concrete immutable pointerfree size:8 >>
+.  .  .  .  .  +- Cuint = Uint32 << concrete immutable pointerfree size:4 >>
+.  .  .  .  .  +- Cuchar = Uint8 << concrete immutable pointerfree size:1 >>
+.  .  +- Complex128 = Complex{Float64} << concrete immutable pointerfree size:16 >>
+.  +- TypeVar << concrete immutable size:24 >>
+.  +- GitVersionInfo << concrete immutable size:64 >>
+.  +- Filter = Filter{I} << concrete immutable size:16 >>
+.  +- WorkerLocalInfo << concrete mutable size:8 >>
+.  +- RoundingMode << concrete immutable pointerfree size:8 >>
+.  +- LambdaStaticData << concrete mutable size:104 >>
+.  +- LabelNode << concrete immutable pointerfree size:8 >>
+.  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
+.  +- Associative = Associative{K,V} << abstract immutable size:0 >>
+.  .  +- ObjectIdDict << concrete mutable size:8 >>
+.  .  +- VarTable = ObjectIdDict << concrete mutable size:8 >>
+.  .  +- WeakKeyDict = WeakKeyDict{K,V} << concrete mutable size:8 >>
+.  .  +- Dict = Dict{K,V} << concrete mutable size:48 >>
+.  .  +- EnvHash << concrete mutable pointerfree size:0 >>
 .  +- Type = Type{T<:Top} << abstract immutable size:0 >>
 .  .  +- UnionType << concrete immutable size:8 >>
-.  .  .  +- None 
-.  .  .  +- Chars = Union(AbstractArray{Char,1},Char,Set{Char}) 
-.  .  .  +- Union(Array{T,2},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},Array{T,1}) 
-.  .  .  .  +- StridedVecOrMat = Union(Array{T,2},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},Array{T,1}) 
+.  .  .  +- SmallSigned = Union(Int32,Int8,Int16) 
+.  .  .  +- Signed64 = Union(Int32,Int64,Int8,Int16) 
+.  .  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
 .  .  .  +- Top 
-.  .  .  +- Callback = Union(Bool,Function) 
-.  .  .  +- ExprNode = Union(SymbolNode,TopNode,QuoteNode,LabelNode,LineNumberNode,GotoNode) 
-.  .  .  +- Executable = Union(Function,Array{Union(ASCIIString,UTF8String),1}) 
+.  .  .  +- Callback = Union(Function,Bool) 
+.  .  .  +- None 
 .  .  .  +- NonTupleType = Union(TypeConstructor,DataType,UnionType) 
+.  .  .  +- RawOrBoxedHandle = Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}) 
+.  .  .  +- Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)},DArray{T,N,A}) 
+.  .  .  .  +- SubOrDArray = Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Int64,Range{Int64})...,)},DArray{T,N,A}) 
+.  .  .  +- Union(DenseArray{T,1},DenseArray{T,2}) 
+.  .  .  .  +- DenseVecOrMat = Union(DenseArray{T,1},DenseArray{T,2}) 
+.  .  .  +- Callable = Union(DataType,Function) 
+.  .  .  +- Union(AbstractArray{T,2},AbstractArray{T,1}) 
+.  .  .  .  +- AbstractVecOrMat = Union(AbstractArray{T,2},AbstractArray{T,1}) 
+.  .  .  +- Chars = Union(Char,Set{Char},AbstractArray{Char,1}) 
+.  .  .  +- basenumtype = Union(Int32,Int64,Complex{Float32},Rational{T<:Integer},Complex{Float64},Float32,Float64) 
+.  .  .  +- Union(DenseArray{T,N},SubArray{T,N,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  .  +- StridedArray = Union(DenseArray{T,N},SubArray{T,N,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  +- Union(SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  .  +- StridedMatrix = Union(SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  +- Union(AbstractArray{Range{Int64},1},(Union(Range{T},AbstractArray{Int64,1})...,),AbstractArray{UnitRange{Int64},1},AbstractArray{A<:AbstractArray{Int64,1},1}) 
+.  .  .  +- ProcessChainOrNot = Union(ProcessChain,Bool) 
+.  .  .  +- Redirectable = Union(IOStream,AsyncStream,FileRedirect,File) 
+.  .  .  +- RangeIndex = Union(Int64,Range{Int64}) 
 .  .  .  +- Void = None 
+.  .  .  +- SmallUnsigned = Union(Uint8,Uint32,Uint16) 
+.  .  .  +- ByteString = Union(ASCIIString,UTF8String) 
 .  .  .  +- Union(Array{T,2},Array{T,1}) 
 .  .  .  .  +- VecOrMat = Union(Array{T,2},Array{T,1}) 
-.  .  .  +- Union(Array{T,2},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedMatrix = Union(Array{T,2},SubArray{T,2,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},DArray{T,N,A}) 
-.  .  .  .  +- SubOrDArray = Union(SubArray{T,N,D<:DArray{T,N,A},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)},DArray{T,N,A}) 
-.  .  .  +- Union(AbstractArray{T,1},AbstractArray{T,2}) 
-.  .  .  .  +- AbstractVecOrMat = Union(AbstractArray{T,1},AbstractArray{T,2}) 
-.  .  .  +- Union(Array{T,1},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedVector = Union(Array{T,1},SubArray{T,1,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- RangeIndex = Union(Range1{Int64},Int64,Range{Int64}) 
-.  .  .  +- basenumtype = Union(Float64,Int32,Complex{Float64},Complex{Float32},Rational{T<:Integer},Int64,Float32) 
-.  .  .  +- RangeVecIntList = Union(Array{Range1{Int64},1},(Union(Ranges{T},Array{Int64,1})...,),Array{Array{Int64,1},1},Array{Range{Int64},1}) 
-.  .  .  +- Redirectable = Union(File,AsyncStream) 
-.  .  .  +- ProcessChainOrNot = Union(ProcessChain,Bool) 
-.  .  .  +- RawOrBoxedHandle = Union(Ptr{None},File,AsyncStream) 
-.  .  .  +- Union(Array{T,N},SubArray{T,N,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  .  +- StridedArray = Union(Array{T,N},SubArray{T,N,A<:Array{T,N},I<:(Union(Range1{Int64},Int64,Range{Int64})...,)}) 
-.  .  .  +- ByteString = Union(ASCIIString,UTF8String) 
+.  .  .  +- Union(DenseArray{T,1},SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  .  +- StridedVecOrMat = Union(DenseArray{T,1},SubArray{T,2,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)},DenseArray{T,2}) 
+.  .  .  +- Unsigned64 = Union(Uint8,Uint32,Uint64,Uint16) 
+.  .  .  +- Union(DenseArray{T,1},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  .  +- StridedVector = Union(DenseArray{T,1},SubArray{T,1,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}) 
+.  .  .  +- ByteArray = Union(Array{Int8,1},Array{Uint8,1}) 
 .  .  +- TypeConstructor << concrete immutable size:16 >>
 .  .  .  +- NonTupleType = Union(TypeConstructor,DataType,UnionType) 
 .  .  +- DataType << concrete mutable size:88 >>
+.  .  .  +- Callable = Union(DataType,Function) 
 .  .  .  +- NonTupleType = Union(TypeConstructor,DataType,UnionType) 
-.  +- MethodTable << concrete mutable size:56 >>
-.  +- LineNumberNode << concrete immutable pointerfree size:8 >>
-.  .  +- ExprNode = Union(SymbolNode,TopNode,QuoteNode,LabelNode,LineNumberNode,GotoNode) 
-.  +- Algorithm << abstract immutable size:0 >>
-.  .  +- QuickSort << concrete mutable pointerfree size:0 >>
-.  .  +- TimSort << concrete mutable pointerfree size:0 >>
-.  .  +- InsertionSort << concrete mutable pointerfree size:0 >>
-.  .  +- MergeSort << concrete mutable pointerfree size:0 >>
-+- StdIOSet = (Union(Ptr{None},File,AsyncStream),Union(Ptr{None},File,AsyncStream),Union(Ptr{None},File,AsyncStream)) 
+.  +- Set = Set{Char} << concrete mutable size:8 >>
+.  .  +- Chars = Union(Char,Set{Char},AbstractArray{Char,1}) 
+.  +- IntegerPartitions << concrete immutable pointerfree size:8 >>
+.  +- RegexMatchIterator << concrete immutable size:24 >>
+.  +- CallStack << concrete mutable size:64 >>
+.  +- StaticVarInfo << concrete mutable size:32 >>
+.  +- Rest = Rest{I,S} << concrete immutable size:16 >>
+.  +- ClusterManager << abstract immutable size:0 >>
+.  .  +- SSHManager << concrete immutable size:24 >>
+.  .  +- LocalManager << concrete immutable size:16 >>
+.  +- ProcessGroup << concrete mutable size:24 >>
+.  +- QuoteNode << concrete immutable size:8 >>
+.  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
+.  +- RemoteValue << concrete mutable size:48 >>
+.  +- StatStruct << concrete immutable pointerfree size:96 >>
+.  +- UniformScaling = UniformScaling{T<:Number} << concrete immutable size:8 >>
+.  +- LocalProcess << concrete mutable size:16 >>
+.  +- UndefRefTag << abstract immutable size:0 >>
+.  +- Expr << concrete mutable size:24 >>
+.  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
+.  +- LongExpr << abstract immutable size:0 >>
+.  +- Prehashed << concrete immutable pointerfree size:8 >>
+.  +- SymbolNode << concrete mutable size:16 >>
+.  .  +- ExprNode = Union(LabelNode,SymbolNode,GotoNode,QuoteNode,LineNumberNode,Expr,TopNode) 
+.  +- Symbol << concrete mutable size:0 >>
+.  +- UVPollingWatcher << abstract immutable size:0 >>
+.  .  +- FDWatcher << concrete mutable size:40 >>
+.  .  +- PollingFileWatcher << concrete mutable size:40 >>
+.  +- IntrinsicFunction << concrete immutable pointerfree size:4 >>
+.  +- TypeName << concrete mutable size:32 >>
+.  +- LongSymbol << abstract immutable size:0 >>
+.  +- LongTuple << abstract immutable size:0 >>
+.  +- SetPartitions = SetPartitions{T<:AbstractArray{T,1}} << concrete immutable size:8 >>
+.  +- Method << concrete mutable size:48 >>
+.  +- Ptr = Ptr{None} << concrete immutable pointerfree size:8 >>
+.  .  +- RawOrBoxedHandle = Union(IOStream,AsyncStream,FileRedirect,File,Ptr{None}) 
++- #s1730 = (Range{T},BitArray{N},SparseMatrixCSC{Tv,Ti<:Integer},Union(DenseArray{T,N},SubArray{T,N,A<:DenseArray{T,N},I<:(Union(Int64,Range{Int64})...,)}),AbstractArray{T,N}) 
 +- Tuple = (Any...,) 
++- Dims = (Int64...,) 
 +- _inttypes = (Bool,Int8,Uint8,Int16,Uint16,Int32,Uint32,Char,Int64,Uint64,Int128,Uint128) 
 ````
 
